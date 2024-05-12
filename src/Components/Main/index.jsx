@@ -5,6 +5,7 @@ import bear from "../../../public/images/bear.png";
 import stars from "../../../public/images/stars.png";
 import styles from "./main.module.scss";
 import ui from "../../../public/images/ui.png";
+import Musik from "../Musik";
 
 export default function Main() {
   return (
@@ -57,12 +58,13 @@ export default function Main() {
       </div>
 
       <Image
-        className="mx-auto my-auto"
+        className="mx-auto mx-auto-mobile mb-10"
         height={200}
         width={200}
         src={ui}
         alt="ui"
       />
+      <Musik />
     </div>
   );
 }

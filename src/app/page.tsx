@@ -57,8 +57,22 @@ export default function Home() {
       </div>
 
       <Image className="" height={155} width={155} src={sleep} alt="sleep" />
-      <Image className="" height={364} width={364} src={lenta} alt="lenta" />
-      <Image className="" height={364} width={364} src={lenta} alt="lenta" />
+      <div className=" overflow-hidden align-center min-w-[300px]: flex min-w-[300px]: md:block ">
+        <Image
+          className="   min-w-[300px]: rotate-[-45deg]  "
+          height={364}
+          width={364}
+          src={lenta}
+          alt="lenta"
+        />
+        <Image
+          className="  min-w-[300px]: rotate-[45deg] "
+          height={364}
+          width={364}
+          src={lenta}
+          alt="lenta"
+        />
+      </div>
 
       <div className="text-center mt-10">
         <p className="tomi">Мекен жайымыз: </p>
@@ -96,13 +110,9 @@ export default function Home() {
       </div>
       <Image height={200} width={200} src={sleepBear} alt="sleepBear" />
 
-      <div className="text-center">
-        <p className="toii"> Құрметті қонақ</p>
-        <p className="toii">тойға келетініңізді</p>
-        <p className="toii">растаңыз</p>
-      </div>
+   
 
-      {/* <Attendance /> */}
+      <Attendance />
     </main>
   );
 }

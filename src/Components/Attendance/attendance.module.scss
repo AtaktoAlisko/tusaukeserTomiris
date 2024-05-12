@@ -1,55 +1,116 @@
-// .App {
-//   justify-content: center;
-//   align-items: center;
-//   text-align: start;
-// }
+// attendance.module.scss
 
-// .form {
-//   flex-direction: column;
-//   align-items: center;
-//   padding: 20px;
-// }
+.App {
+  justify-content: center;
+  flex-direction: column;
+  text-align: start;
+  margin-top: 30px;
 
-// .wishes {
-//   height: 100px;
-// }
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 
-// input[type="text"],
-// input[type="submit"] {
-//   border-color: antiquewhite;
-//   width: 175px;
-//   padding: 10px;
-//   border-radius: 10px;
-//   margin-bottom: 15px;
-// }
+    // Отменяем выравнивание по центру для формы, чтобы инпуты располагались вертикально
+    text-align: start;
+  }
 
-// input[type="text"]:focus,
-// input[type="submit"]:focus {
-//   outline: none;
-// }
+  .wishes {
+    height: 100px;
+  }
 
-// .anketa {
-//   font-size: 20px;
-//   text-align: center;
-// }
+  input[type="text"],
+  input[type="submit"] {
+    border-color: antiquewhite;
+    width: 175px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+  }
 
-// .anketa2 {
-//   font-size: 20px;
-//   margin-top: -20px;
-//   text-align: center;
-// }
+  input[type="text"]:focus,
+  input[type="submit"]:focus {
+    outline: none;
+  }
 
-// .radio {
-//   margin: 15px;
-// }
+  .anketa {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 
-// .button {
-//   margin: 0 auto;
-//   display: block;
-//   align-items: center;
-//   margin-top: 30px;
-//   padding: 10px 20px;
-//   border-radius: 10px;
-//   border: none;
-//   width: 150px;
-// }
+  .anketa2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .radio {
+    margin: 15px;
+  }
+
+  // attendance.module.scss
+
+  .button {
+    margin: 0 auto;
+    display: block;
+    align-items: center;
+    margin-top: 30px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    width: 150px;
+    background-color: pink; // Задаем цвет фона
+    color: white; // Задаем цвет текста
+    font-size: 16px; // Задаем размер шрифта
+    cursor: pointer;
+    transition: background-color 0.3s ease; // Добавляем плавное изменение цвета фона при наведении
+
+    &:hover {
+      background-color: deepskyblue; // Изменяем цвет фона при наведении
+    }
+  }
+  .radio {
+    margin: 15px;
+
+    // Style radio buttons
+    input[type="radio"] {
+      margin-right: 5px; // Add some space between the radio button and its label
+      // Customize appearance of the radio button itself
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 20px; // Set the width and height of the radio button
+      height: 20px;
+      border: 2px solid pink; // Border color of the radio button
+      border-radius: 50%; // Make the radio button circular
+      outline: none; // Remove outline when focused
+      cursor: pointer;
+    }
+
+    // Style radio button labels
+    label {
+      font-size: 16px; // Adjust label font size
+    }
+
+    // Style checked radio buttons
+    input[type="radio"]:checked {
+      background-color: pink; // Change background color when checked
+    }
+  }
+
+  // Adjust input width to make them slightly smaller
+  input[type="text"],
+  input[type="submit"] {
+    border-color: antiquewhite;
+    width: 150px; // Decrease input width
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 100%; // Make inputs take full width of container
+  }
+
+  // Rest of your styles...
+}

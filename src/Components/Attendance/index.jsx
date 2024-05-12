@@ -1,7 +1,8 @@
-import React from "react";
+"use client";
 import Image from "next/image";
-import styles from "./attendance.module.scss";
 import { useState } from "react";
+import styles from "./attendance.module.scss";
+
 
 export default function AttendanceForm() {
   const [attendance, setAttendance] = useState("");
@@ -38,13 +39,13 @@ export default function AttendanceForm() {
         <div className="formalar">
           <form className="form" onSubmit={(e) => Submit(e)}>
             <input
-              className={styles.atiniz}
+              className={`${styles.atiniz} ${styles.textInput}`}
               placeholder="Атыңыз"
               name="Name"
               type="text"
             />
             <input
-              className={styles.wishes}
+              className={`${styles.wishes} ${styles.textInput}`}
               placeholder="Тілектеріңіз"
               name="Message"
               type="text"
