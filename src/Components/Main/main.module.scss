@@ -1,0 +1,68 @@
+.Main {
+  overflow: hidden;
+  .pictures {
+    .cloud {
+      position: fixed;
+
+      &.movingImage {
+        position: absolute;
+        top: 0;
+        animation: move-left-right 10s linear infinite alternate;
+      }
+    }
+
+    .cloudSecond {
+      position: fixed;
+      margin-top: 20px;
+
+      &.movingImageSecond {
+        position: absolute;
+        top: 0;
+        animation: move-right-left 10s linear infinite alternate;
+      }
+    }
+    .bear {
+      position: relative;
+      animation: resize 5s ease-in-out infinite alternate;
+    }
+  }
+
+  .Tomiris {
+    font-size: 25px;
+    animation: resize 5s ease-in-out infinite alternate;
+  }
+
+  .stars {
+    animation: resize 5s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes move-left-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes move-right-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes resize {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(1);
+  }
+}

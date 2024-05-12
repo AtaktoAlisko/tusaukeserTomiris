@@ -2,32 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  background-image: url "../images/color.png";
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.kurmet {
+  font-size: 20px;
+  text-align: center;
+}
+
+.stars {
+  animation: resize 5s ease-in-out infinite alternate;
+}
+
+.bastau {
+  font-size: 20px;
+}
+@keyframes resize {
+  0%,
+  100% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(1);
+  }
+}
+
+.tomi {
+  font-size: 20px;
+}
+
+.car {
+  transform: translateX(-50%);
+  animation: moveForwardBackward 4s linear infinite alternate;
+  margin-top: 80px;
+}
+@keyframes moveForwardBackward {
+  0%,
+  100% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(-50%) translateX(-50px);
+  }
+}
+
+.sizder {
+  font-size: 20px;
+}
+
+.toii {
+  font-size: 20px;
 }
