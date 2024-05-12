@@ -8,7 +8,9 @@ import lenta from "../../public/images/lenta.png";
 import car from "../../public/images/car.png";
 import gis from "../../public/images/2gis.jpeg";
 import insta from "../../public/images/insta.webp";
-
+import sleepBear from "../../public/images/sleep.png";
+import Attendance from "../Components/Attendance";
+import { useState } from "react";
 export default function Home() {
   return (
     <main className="flex  flex-col items-center  ">
@@ -75,13 +77,6 @@ export default function Home() {
 
       {/* <Map /> */}
 
-      <div className="text-center">
-        <p className="toii"> Той иелері:</p>
-        <p className="toii">Апасы:</p>
-        <p className="toii">Ата-анасы</p>
-        <p className="toii">Алибек && Мөлдір</p>
-      </div>
-
       <div className="flex justify-center justify-between">
         <Image
           height={50}
@@ -92,6 +87,22 @@ export default function Home() {
         />
         <Image height={50} width={50} src={insta} alt="insta" />
       </div>
+
+      <div className="text-center">
+        <p className="toii"> Той иелері:</p>
+        <p className="toii">Апасы:</p>
+        <p className="toii">Ата-анасы</p>
+        <p className="toii">Алибек && Мөлдір</p>
+      </div>
+      <Image height={200} width={200} src={sleepBear} alt="sleepBear" />
+
+      <div className="text-center">
+        <p className="toii"> Құрметті қонақ</p>
+        <p className="toii">тойға келетініңізді</p>
+        <p className="toii">растаңыз</p>
+      </div>
+
+      {/* <Attendance /> */}
     </main>
   );
 }
