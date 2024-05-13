@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Main from "../Components/Main";
-import Map from "../Components/Map";
 import stars from "../../public/images/stars.png";
 import calendar from "../../public/images/calendar.png";
 import sleep from "../../public/images/bearSleep.png";
@@ -10,20 +9,21 @@ import gis from "../../public/images/2gis.jpeg";
 import insta from "../../public/images/insta.webp";
 import sleepBear from "../../public/images/sleep.png";
 import Attendance from "../Components/Attendance";
-import { useState } from "react";
+import AnimatedText from "../Components/AnimatedText";
+
 export default function Home() {
   return (
-    <main className="flex  flex-col items-center  ">
+    <main className="flex  flex-col items-center text-[16px] sm:text-[20px] mb-[10px]">
       <Main />
-      <div className="mt-20 ">
-        <p className="kurmet ">Құрметті қонақтар!</p>
-        <p className="kurmet ">Cіз(дер)ді қызымыз</p>
-        <p className="kurmet ">Томирисіміздің</p>
-        <p className="kurmet ">тұсау кесер тойына</p>
-        <p className="kurmet ">арналған салтанатты</p>
-        <p className="kurmet ">ақ дастарханымыздың</p>
-        <p className="kurmet ">қадірлі қонағы болуға</p>
-        <p className="kurmet ">шақырамыз!!!</p>
+      <div className="mt-10 mb-20 text-[24px] sm:text-[20px] mb-[10px] text-center  ">
+        <p>Құрметті қонақтар!</p>
+        <p>Cіз(дер)ді қызымыз</p>
+        <p>Томирисіміздің</p>
+        <p>тұсау кесер тойына</p>
+        <p>арналған салтанатты</p>
+        <p>ақ дастарханымыздың</p>
+        <p>қадірлі қонағы болуға</p>
+        <p>шақырамыз!!!</p>
       </div>
       <div className="flex justify-center justify-between">
         <Image
@@ -42,7 +42,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="text-center mt-10">
+      <div className="text-center mt-10 text-[20px] sm:text-[20px] mb-[10px]">
         <p className="bastau">Той салтанаты:</p>
         <p className="bastau">5 маусым 2024 жыл</p>
         <p className="bastau">сағат 18:00</p>
@@ -56,17 +56,17 @@ export default function Home() {
         />
       </div>
 
-      <Image className="" height={155} width={155} src={sleep} alt="sleep" />
-      <div className=" overflow-hidden align-center min-w-[300px]: flex min-w-[300px]: md:block ">
+      <Image className="" height={200} width={200} src={sleep} alt="sleep" />
+      <div className="overflow-hidden flex justify-center items-center min-w-[300px] md:block mt-[-85px]">
         <Image
-          className="   min-w-[300px]: rotate-[-45deg]  "
+          className="rotate-[-20deg] h-[250px] w-[400px]"
           height={364}
           width={364}
           src={lenta}
           alt="lenta"
         />
         <Image
-          className="  min-w-[300px]: rotate-[45deg] "
+          className="rotate-[28deg] h-[250px] w-[400px]"
           height={364}
           width={364}
           src={lenta}
@@ -74,19 +74,25 @@ export default function Home() {
         />
       </div>
 
-      <div className="text-center mt-10">
-        <p className="tomi">Мекен жайымыз: </p>
-        <p className="tomi"> Талдықорған қаласы</p>
-        <p className="tomi">Куренбель 40</p>
-        <p className="tomi">"Пиала"</p>
-        <p className="tomi"> Мейрамханасы</p>
+      <div className="text-center mt-[-60px]  text-[20px] sm:text-[20px] mb-[10px] ">
+        <p>Мекен жайымыз: </p>
+        <p> Талдықорған қаласы</p>
+        <p>Куренбель 40</p>
+        <p>"Пиала"</p>
+        <p> Мейрамханасы</p>
       </div>
 
       <Image className="car" height={233} width={233} src={car} alt="car" />
+      {/* <div className="text-center mt-[-60px] text-[16px] sm:text-[20px]">
+        <p className=""> Той иелері:</p>
+        <p className=" ">Апасы:Айгуль</p>
+        <p className="">Ата-анасы</p>
+        <p className="">Алибек && Мөлдір</p>
+      </div> */}
 
-      <div className="text-center">
-        <p className="sizder">Cіздерге ыңғайлы болу үщін</p>
-        <p className="sizder">төмендегі көрсетілген картаны қолданыңыз</p>
+      <div className="text-center mb-10 text-[18px] sm:text-[20px]">
+        <p className="">Cіздерге ыңғайлы болу үшін</p>
+        <p className="">төмендегі көрсетілген картаны қолданыңыз</p>
       </div>
 
       {/* <Map /> */}
@@ -102,17 +108,10 @@ export default function Home() {
         <Image height={50} width={50} src={insta} alt="insta" />
       </div>
 
-      <div className="text-center">
-        <p className="toii"> Той иелері:</p>
-        <p className="toii">Апасы:</p>
-        <p className="toii">Ата-анасы</p>
-        <p className="toii">Алибек && Мөлдір</p>
-      </div>
       <Image height={200} width={200} src={sleepBear} alt="sleepBear" />
-
-   
 
       <Attendance />
     </main>
   );
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>;
 }

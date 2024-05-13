@@ -1,24 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
   margin: 0;
   background-color: #faf4ea;
-}
-
-.kurmet {
-  font-size: 20px;
-  text-align: center;
+  font-family: "Noto Serif Display", serif;
 }
 
 .stars {
   animation: resize 5s ease-in-out infinite alternate;
 }
 
-.bastau {
-  font-size: 20px;
-}
 @keyframes resize {
   0%,
   100% {
@@ -30,10 +24,6 @@ body {
   75% {
     transform: scale(1);
   }
-}
-
-.tomi {
-  font-size: 20px;
 }
 
 .car {
@@ -51,10 +41,6 @@ body {
   }
 }
 
-.sizder {
-  font-size: 20px;
-}
-
-.toii {
-  font-size: 20px;
+.rotate-image {
+  animation: rotate 20s linear infinite;
 }

@@ -1,5 +1,3 @@
-// attendance.module.scss
-
 .App {
   justify-content: center;
   flex-direction: column;
@@ -12,7 +10,6 @@
     align-items: center;
     padding: 20px;
 
-    // Отменяем выравнивание по центру для формы, чтобы инпуты располагались вертикально
     text-align: start;
   }
 
@@ -35,82 +32,58 @@
     outline: none;
   }
 
-  .anketa {
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  .anketa2 {
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
   .radio {
     margin: 15px;
   }
 
-  // attendance.module.scss
-
   .button {
-    margin: 0 auto;
-    display: block;
-    align-items: center;
+    width: 100%;
     margin-top: 30px;
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 10px;
     border: none;
-    width: 150px;
-    background-color: pink; // Задаем цвет фона
-    color: white; // Задаем цвет текста
-    font-size: 16px; // Задаем размер шрифта
+    background-color: pink;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease; // Добавляем плавное изменение цвета фона при наведении
+    transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: deepskyblue; // Изменяем цвет фона при наведении
+      background-color: pink;
     }
   }
   .radio {
     margin: 15px;
 
-    // Style radio buttons
     input[type="radio"] {
-      margin-right: 5px; // Add some space between the radio button and its label
-      // Customize appearance of the radio button itself
+      margin-right: 5px;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      width: 20px; // Set the width and height of the radio button
+      width: 20px;
       height: 20px;
-      border: 2px solid pink; // Border color of the radio button
-      border-radius: 50%; // Make the radio button circular
-      outline: none; // Remove outline when focused
+      border: 2px solid pink;
+      border-radius: 50%;
+      outline: none;
       cursor: pointer;
     }
 
-    // Style radio button labels
     label {
-      font-size: 16px; // Adjust label font size
+      font-size: 16px;
     }
 
-    // Style checked radio buttons
     input[type="radio"]:checked {
-      background-color: pink; // Change background color when checked
+      background-color: pink;
     }
   }
 
-  // Adjust input width to make them slightly smaller
   input[type="text"],
   input[type="submit"] {
     border-color: antiquewhite;
-    width: 150px; // Decrease input width
+    width: 150px;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 15px;
-    width: 100%; // Make inputs take full width of container
+    width: 100%;
   }
-
-  // Rest of your styles...
 }

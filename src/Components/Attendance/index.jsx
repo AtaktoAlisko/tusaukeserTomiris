@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useState } from "react";
 import styles from "./attendance.module.scss";
 
-
 export default function AttendanceForm() {
   const [attendance, setAttendance] = useState("");
 
@@ -33,26 +32,25 @@ export default function AttendanceForm() {
   }
   return (
     <div className={styles.App}>
-      <div className="form center">
-        <p className={styles.anketa}>Анкетаны толтыруыңызды сұраймыз</p>
-        <p className={styles.anketa2}>Біз үшін өте маңызды!</p>
-        <div className="formalar">
+      <div className="form center mb-20">
+        <p className="text-center min-w-[300px]: text-[18px] sm:text-[20px] mb-[10px]">Анкетаны толтыруыңызды сұраймыз</p>
+        <p className="text-center min-w-[300px]: text-[18px] sm:text-[20px] mb-[10px]">Біз үшін өте маңызды!</p>
+        <div className="min-w-[300px]: mx-[20px] sm: mx-auto relative mt-6">
           <form className="form" onSubmit={(e) => Submit(e)}>
             <input
-              className={`${styles.atiniz} ${styles.textInput}`}
+              className="min-w-[300px]: text-[14px] sm: text-[20px]"
               placeholder="Атыңыз"
               name="Name"
               type="text"
             />
             <input
-              className={`${styles.wishes} ${styles.textInput}`}
+              className="h-[100px] min-w-[300px]: text-[14px] sm:text-[20px]"
               placeholder="Тілектеріңіз"
               name="Message"
               type="text"
             />
-
             <div className={styles.radio}>
-              <div>
+              <div className="flex items-center">
                 <input
                   type="radio"
                   id="willAttend"
@@ -60,9 +58,11 @@ export default function AttendanceForm() {
                   checked={attendance === "Приду"}
                   onChange={() => setAttendance("Приду")}
                 />
-                <label htmlFor="willAttend">Келемін</label>
+                <label htmlFor="willAttend" className="ml-2">
+                  Келемін
+                </label>
               </div>
-              <div>
+              <div className="flex items-center">
                 <input
                   type="radio"
                   id="willAttendWithWife"
@@ -70,9 +70,11 @@ export default function AttendanceForm() {
                   checked={attendance === "Приду с женой"}
                   onChange={() => setAttendance("Приду с женой")}
                 />
-                <label htmlFor="willAttendWithWife">Жұбайымен</label>
+                <label htmlFor="willAttendWithWife" className="ml-2">
+                  Жұбайымен
+                </label>
               </div>
-              <div>
+              <div className="flex items-center">
                 <input
                   type="radio"
                   id="cannotAttend"
@@ -80,12 +82,16 @@ export default function AttendanceForm() {
                   checked={attendance === "Не могу прийти"}
                   onChange={() => setAttendance("Не могу прийти")}
                 />
-                <label htmlFor="cannotAttend">Келе алмаймын</label>
+                <label htmlFor="cannotAttend" className="ml-2">
+                  Келе алмаймын
+                </label>
               </div>
             </div>
-            <button className={styles.button} type="submit">
-              Жіберу
-            </button>
+            <div className="flex-1 flex justify-center ">
+              <button className={styles.button} type="submit">
+                Жіберу
+              </button>
+            </div>
           </form>
         </div>
       </div>

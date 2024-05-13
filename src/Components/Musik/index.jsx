@@ -1,11 +1,14 @@
+// components/Musik.js
 "use client";
-import { useState } from "react";
-import styles from "./musik.module.scss";
+
+import { useState, useRef, useEffect } from "react";
+import styles from "./Musik.module.scss";
 import proigr from "../../../public/images/proigriv.png";
+import muz from "../../assets/muzik.mp3";
 import Image from "next/image";
 
 export default function Musik() {
-  const [audio] = useState(new Audio("../../assets/muzik.mp3")); 
+  const [audio] = useState(new Audio(muz));
   const [isPlaying, setIsPlaying] = useState(false);
 
   function play(event) {
@@ -21,7 +24,7 @@ export default function Musik() {
 
   return (
     <button
-      className={`${styles.muzik} ${isPlaying ? "rotate-image" : ""}`}
+      className={`${styles.muzik} ${isPlaying ? "animate-spin" : ""}`}
       onClick={play}
     >
       <Image height={24} width={50} src={proigr} alt="musik" />
