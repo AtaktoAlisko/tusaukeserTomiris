@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useState } from "react";
 import styles from "./attendance.module.scss";
 
@@ -59,18 +58,20 @@ export default function AttendanceForm() {
         </p>
         <div className="min-w-[300px]: mx-[20px] sm: mx-auto relative mt-6">
           <form className="form" onSubmit={(e) => Submit(e)}>
-            <input
-              className="min-w-[300px]: text-[14px] sm: text-[20px]"
-              placeholder="Атыңыз"
-              name="Name"
-              type="text"
-            />
-            <input
-              className="h-[100px] min-w-[300px]: text-[14px] sm:text-[20px]"
-              placeholder="Тілектеріңіз"
-              name="Message"
-              type="text"
-            />
+            <div className="min-w-[300px]: mx-5">
+              <input
+                className="min-w-[300px]:text-[14px] sm:text-[20px]"
+                placeholder="Атыңыз"
+                name="Name"
+                type="text"
+              />
+              <input
+                className="h-[100px] min-w-[300px]:text-[14px] sm:text-[20px]"
+                placeholder="Тілектеріңіз"
+                name="Message"
+                type="text"
+              />
+            </div>
             <div className={styles.radio}>
               <div className="flex items-center">
                 <input
@@ -109,7 +110,7 @@ export default function AttendanceForm() {
                 </label>
               </div>
             </div>
-            <div className="flex-1 flex justify-center ">
+            <div className="flex-1 flex justify-center min-w-[300px]: mx-5">
               <button className={styles.button} type="submit">
                 Жіберу
               </button>

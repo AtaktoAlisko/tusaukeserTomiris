@@ -1,7 +1,6 @@
 // components/Musik.js
 "use client";
 
-import { useState, useRef, useEffect } from "react";
 import styles from "./Musik.module.scss";
 import proigr from "../../../public/images/proigriv.png";
 import Image from "next/image";
