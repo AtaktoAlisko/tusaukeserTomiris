@@ -9,7 +9,6 @@ import gis from "../../public/images/2gis.jpeg";
 import insta from "../../public/images/insta.webp";
 import sleepBear from "../../public/images/sleep.png";
 import Attendance from "../components/Attendance";
-import AnimatedText from "../components/AnimatedText";
 import heart from "../../public/images/heart.png";
 import shar from "../../public/images/Shar.png";
 
