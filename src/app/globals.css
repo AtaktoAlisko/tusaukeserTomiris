@@ -1,11 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&display=swap");
 body {
   margin: 0;
   background-color: #faf4ea;
+  font-family: "Noto Serif Display", serif;
 }
 
 .stars {
@@ -152,5 +151,21 @@ body {
   .image {
     margin-top: -236px;
     margin-right: -70px;
+  }
+}
+.text-animation {
+  animation-name: textAnimation;
+  animation-duration: 2s; /* Adjust duration as needed */
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

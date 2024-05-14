@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { YMaps, Map, Placemark, useClient } from "@pbe/react-yandex-maps";
 
 export default function Main() {

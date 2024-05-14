@@ -16,7 +16,11 @@ export default function Home() {
   return (
     <main className="flex  flex-col items-center text-[16px] sm:text-[20px] mb-[10px]">
       <Main />
-      <div className="  mt-10 mb-20 text-[24px] sm:text-[20px] mb-[10px] text-center  ">
+      <div
+        className="mt-10 mb-20 text-[24px] sm:text-[20px] mb-[10px] text-center text-animation"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom"
+      >
         <p className="kurmet kurmet2 mb-10">Құрметті қонақтар!</p>
         <p className="kurmet">Cіз(дер)ді қызымыз</p>
         <p className="kurmet2">Томирисіміздін</p>
@@ -26,6 +30,7 @@ export default function Home() {
         <p className="kurmet">қадірлі қонағы болуға</p>
         <p className="kurmet">шақырамыз!!!</p>
       </div>
+
       <div className="flex justify-center justify-between">
         <Image
           className="stars"
