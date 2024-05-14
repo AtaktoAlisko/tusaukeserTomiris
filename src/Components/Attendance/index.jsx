@@ -33,8 +33,17 @@ export default function AttendanceForm() {
   return (
     <div className={styles.App}>
       <div className="form center mb-20">
-        <p className="text-center min-w-[300px]: text-[18px] sm:text-[20px] mb-[10px]">Анкетаны толтыруыңызды сұраймыз</p>
-        <p className="text-center min-w-[300px]: text-[18px] sm:text-[20px] mb-[10px]">Біз үшін өте маңызды!</p>
+        <p
+          className={`${styles.anketa} text-center min-w-[300px] text-[18px] sm:text-[20px] mb-[10px]`}
+        >
+          Анкетаны толтыруыңызды сұраймыз
+        </p>
+
+        <p
+          className={`${styles.anketa} text-center min-w-[300px] text-[18px] sm:text-[20px] mb-[10px]`}
+        >
+          Біз үшін өте маңызды!
+        </p>
         <div className="min-w-[300px]: mx-[20px] sm: mx-auto relative mt-6">
           <form className="form" onSubmit={(e) => Submit(e)}>
             <input
@@ -54,9 +63,9 @@ export default function AttendanceForm() {
                 <input
                   type="radio"
                   id="willAttend"
-                  value="Приду"
-                  checked={attendance === "Приду"}
-                  onChange={() => setAttendance("Приду")}
+                  value="Келемін"
+                  checked={attendance === "Келемін"}
+                  onChange={() => setAttendance("Келемін")}
                 />
                 <label htmlFor="willAttend" className="ml-2">
                   Келемін
@@ -66,9 +75,9 @@ export default function AttendanceForm() {
                 <input
                   type="radio"
                   id="willAttendWithWife"
-                  value="Приду с женой"
-                  checked={attendance === "Приду с женой"}
-                  onChange={() => setAttendance("Приду с женой")}
+                  value="Жұбайымен"
+                  checked={attendance === "Жұбайымен"}
+                  onChange={() => setAttendance("Жұбайымен")}
                 />
                 <label htmlFor="willAttendWithWife" className="ml-2">
                   Жұбайымен
@@ -78,9 +87,9 @@ export default function AttendanceForm() {
                 <input
                   type="radio"
                   id="cannotAttend"
-                  value="Не могу прийти"
-                  checked={attendance === "Не могу прийти"}
-                  onChange={() => setAttendance("Не могу прийти")}
+                  value="Келе алмаймын"
+                  checked={attendance === "Келе алмаймын"}
+                  onChange={() => setAttendance("Келе алмаймын")}
                 />
                 <label htmlFor="cannotAttend" className="ml-2">
                   Келе алмаймын

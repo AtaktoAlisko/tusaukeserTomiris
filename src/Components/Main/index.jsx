@@ -7,7 +7,7 @@ import bear from "../../../public/images/bear.png";
 import stars from "../../../public/images/stars.png";
 import styles from "./main.module.scss";
 import ui from "../../../public/images/ui.png";
-import proigr from "../../../public/images/proigriv.png";
+import proigr from "../../../public/images/proiriv.png";
 import muz from "../../assets/muzik.mp3";
 
 export default function Main() {
@@ -31,7 +31,7 @@ export default function Main() {
           className={`${styles.muzik} ${isPlaying ? "animate-spin" : ""}`}
           onClick={play}
         >
-          <Image height={28} width={55} src={proigr} alt="musik" />
+          <Image height={35} width={80} src={proigr} alt="musik" />
         </button>
       </div>
       <div className={styles.pictures}>
@@ -58,7 +58,7 @@ export default function Main() {
         />
       </div>
 
-      <div className="mt-20 text-center  text-[24px] sm:text-[20px] mb-[10px]  ">
+      <div className="text-center text-[25px] sm:text-[20px]">
         <p className={styles.Tomiris}>Томирис</p>
         <p className={styles.Tomiris}>1 ЖАС</p>
         <p className={styles.Tomiris}> ТҰСАУ КЕСЕР</p>
@@ -80,17 +80,18 @@ export default function Main() {
           alt="stars"
         />
       </div>
+      <div className="mt-[-70px] mb-[70px]">
+        <Image
+          className={`${styles.cloudThird} ${styles.movingImageThird}`}
+          height={100}
+          width={100}
+          src={cloud}
+          alt="cloud3"
+        />
+      </div>
 
       <Image
-        className={`${styles.cloudThird} ${styles.movingImageThird}`}
-        height={100}
-        width={100}
-        src={cloud}
-        alt="cloud3"
-      />
-
-      <Image
-        className="mx-auto mx-auto-mobile mb-10"
+        className="mx-auto mx-auto-mobile "
         height={200}
         width={200}
         src={ui}

@@ -16,6 +16,9 @@
   .wishes {
     height: 100px;
   }
+  .anketa {
+    color: #800000;
+  }
 
   input[type="text"],
   input[type="submit"] {
@@ -42,14 +45,14 @@
     padding: 10px;
     border-radius: 10px;
     border: none;
-    background-color: pink;
+    background-color: #800000;
     color: white;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: pink;
+      background-color: #800000;
     }
   }
   .radio {
@@ -62,7 +65,7 @@
       appearance: none;
       width: 20px;
       height: 20px;
-      border: 2px solid pink;
+      border: 2px solid #800000;
       border-radius: 50%;
       outline: none;
       cursor: pointer;
@@ -73,13 +76,13 @@
     }
 
     input[type="radio"]:checked {
-      background-color: pink;
+      background-color: #800000;
     }
   }
 
   input[type="text"],
   input[type="submit"] {
-    border-color: antiquewhite;
+    border-color: #800000;
     width: 150px;
     padding: 10px;
     border-radius: 10px;

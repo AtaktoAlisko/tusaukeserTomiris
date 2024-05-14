@@ -27,7 +27,13 @@ export default function Musik() {
       className={`${styles.muzik} ${isPlaying ? "animate-spin" : ""}`}
       onClick={play}
     >
-      <Image height={24} width={50} src={proigr} alt="musik" />
+      <Image
+        className="ml-20"
+        height={24}
+        width={50}
+        src={proigr}
+        alt="musik"
+      />
     </button>
   );
 }

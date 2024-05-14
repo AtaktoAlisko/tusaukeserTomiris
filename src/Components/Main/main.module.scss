@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&display=swap");
+
 .Main {
   overflow: hidden;
   .pictures {
@@ -21,14 +23,6 @@
         animation: move-right-left 10s linear infinite alternate;
       }
     }
-    .cloudThird {
-      position: absolute; /* Changed from fixed */
-      &.movingImageThird {
-        position: absolute;
-        top: 0;
-        animation: move-right-left 10s linear infinite alternate;
-      }
-    }
 
     .bear {
       position: relative;
@@ -36,11 +30,19 @@
     }
   }
 
+  .cloudThird {
+    position: fixed;
+    &.movingImageThird {
+      position: absolute;
+      animation: move-right-lefts 10s linear infinite alternate;
+    }
+  }
+
   .Tomiris {
-    font-size: 30px;
     margin-bottom: 20px;
     animation: resize 5s ease-in-out infinite alternate;
     color: #8b0000;
+    font-family: "Great Vibes", cursive;
   }
 
   .stars {
@@ -66,7 +68,7 @@
   }
 }
 
-@keyframes move-right-left {
+@keyframes move-right-lefts {
   0% {
     transform: translateX(0);
   }
