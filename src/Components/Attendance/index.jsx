@@ -5,6 +5,7 @@ import styles from "./attendance.module.scss";
 
 export default function AttendanceForm() {
   const [attendance, setAttendance] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   function Submit(e) {
     e.preventDefault();
@@ -25,11 +26,23 @@ export default function AttendanceForm() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        setIsSubmitted(true);
       })
       .catch((error) => {
         console.log(error);
       });
   }
+
+  if (isSubmitted) {
+    return (
+      <div className={styles.App}>
+        <p className="text-center min-w-[300px] text-[18px] sm:text-[20px] mb-[10px]">
+          Cіздің жауабыңыз қабылданды!
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.App}>
       <div className="form center mb-20">
