@@ -11,7 +11,7 @@ import sleepBear from "../../public/images/sleep.png";
 import Attendance from "../Components/Attendance";
 import AnimatedText from "../Components/AnimatedText";
 import heart from "../../public/images/heart.png";
-import shar from "../../public/images/shar.png";
+import shar from "../../public/images/Shar.png";
 
 export default function Home() {
   return (
