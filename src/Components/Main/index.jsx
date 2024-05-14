@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import cloud from "../../../public/images/cloud.png";
 import bear from "../../../public/images/bear.png";
@@ -11,17 +11,22 @@ import proigr from "../../../public/images/proiriv.png";
 import muz from "../../assets/muzik.mp3";
 
 export default function Main() {
-  const [audio] = useState(new Audio(muz));
+  const [audio, setAudio] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  function play() {
-    if (isPlaying) {
-      audio.pause();
-    } else {
-      audio.play();
-    }
+  useEffect(() => {
+    setAudio(new Audio(muz));
+  }, []);
 
-    setIsPlaying(!isPlaying);
+  function play() {
+    if (audio) {
+      if (isPlaying) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
   }
 
   return (
