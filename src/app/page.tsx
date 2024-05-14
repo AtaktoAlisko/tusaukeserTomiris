@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Main from "../Components/Main";
+import Main from "../components/Main";
 import stars from "../../public/images/stars.png";
 import calendar from "../../public/images/calendar.png";
 import sleep from "../../public/images/bearSleep.png";
@@ -8,8 +8,8 @@ import car from "../../public/images/car.png";
 import gis from "../../public/images/2gis.jpeg";
 import insta from "../../public/images/insta.webp";
 import sleepBear from "../../public/images/sleep.png";
-import Attendance from "../Components/Attendance";
-import AnimatedText from "../Components/AnimatedText";
+import Attendance from "../components/Attendance";
+import AnimatedText from "../components/AnimatedText";
 import heart from "../../public/images/heart.png";
 import shar from "../../public/images/Shar.png";
 
