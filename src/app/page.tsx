@@ -5,8 +5,8 @@ import calendar from "../../public/images/calendar.png";
 import sleep from "../../public/images/bearSleep.png";
 import lenta from "../../public/images/lenta.png";
 import car from "../../public/images/car.png";
-import gis from "../../public/images/2gis.jpeg";
-import insta from "../../public/images/insta.webp";
+import map from "../../public/images/map.png";
+import insta from "../../public/images/insta.png";
 import sleepBear from "../../public/images/sleep.png";
 import Attendance from "../components/Attendance";
 import heart from "../../public/images/heart.png";
@@ -108,15 +108,16 @@ export default function Home() {
       <div className="flex justify-center justify-between">
         <a href="https://yandex.ru/maps/org/piala/33010557490/?ll=78.420631%2C45.048394&z=15.37">
           <Image
-            height={50}
-            width={50}
-            src={gis}
+          className="mt-[-20px]"
+            height={100}
+            width={100}
+            src={map}
             alt="gis"
             style={{ marginRight: "30px" }}
           />
         </a>
         <a href="https://www.instagram.com/piala.tdk/?igsh=NTc4MTIwNjQ2YQ%3D%3D">
-          <Image height={50} width={50} src={insta} alt="insta" />
+          <Image height={100} width={100} src={insta} alt="insta" />
         </a>
       </div>
       <div className="flex justify-center justify-between  mb-[-80px]  mt-[40px] gap-[120px]">
